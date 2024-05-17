@@ -55,7 +55,7 @@ sudo nano /etc/nginx/sites-available/default
 
 içeriğini komple siliyoruz. Kısa yol olarak ctrl + k basılı tutun.
 
-Sonra şu koddaki domain adresini (subdomain kullandıysanız subdomain olacak şekilde) düzenleyin. 4 yerde adres değiştiriyorsunuz.
+Sonra şu koddaki domain adresini (subdomain kullandıysanız subdomain olacak şekilde) ```<>``` işaretleri olmadan düzenleyin. 4 yerde adres değiştiriyorsunuz.
 
 ```
 # Force redirects from HTTP to HTTPS
