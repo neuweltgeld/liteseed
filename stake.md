@@ -17,8 +17,6 @@ sudo docker run -v liteseed:/data edge balance
 
 Gelelim yeni adımlara, bir adet domaine ihtiyacınız var. Ben namecheap kullanıyorum, basit anlaşılır. Hali hazırda domaininiz varsa subdomain ekleyerek de işlemlere devam edebilirsiniz.
 Domain paneline giriyoruz ve ```Manage```tıklıyoruz
-<img width="1068" alt="image" src="https://github.com/neuweltgeld/liteseed/assets/101174090/d534f62c-202f-4f04-a6fe-21544fca30d1">
-
 
 ![image](https://github.com/neuweltgeld/liteseed/assets/101174090/2ace7c15-eaaa-4a6c-acd1-8d0acfa45ff3)
 
@@ -45,10 +43,7 @@ Host : _acme-challenge.liteseed
 
 Value: Size verilen TXT key
 
-Onayladıktan sonra 5dk bekleyin. Sonra şu adresteki ```https://dnschecker.org/#TXT/_acme-challenge.liteseed.neuweltgeld.xyz``` domaini kendinize göre düzenleyip size verilen key dağıtılmış mı kontrol edin.
-Örnek;
-
-<img width="484" alt="image" src="https://github.com/neuweltgeld/liteseed/assets/101174090/fd81db52-d8b3-422c-84fe-2afc10f1962a">
+Onayladıktan sonra 5dk bekleyin. Sonra şu adreste ```https://dnschecker.org/#TXT/``` domaini ```_acme-challenge.domain``` şeklinde aratıp size verilen key dağıtılmış mı kontrol edin.
 
 Yeşil tikleri gördünüz, terminale dönüp enter diyoruz ve başarılı olduğuna dair çıktı alıyoruz.
 
