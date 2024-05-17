@@ -67,7 +67,7 @@ Sonra şu koddaki domain adresini (subdomain kullandıysanız subdomain olacak �
 server {
     listen 80;
     listen [::]:80;
-    server_name liteseed.neuweltgeld.xyz;
+    server_name <domain>;
 
     location / {
         return 301 https://$host$request_uri;
@@ -78,10 +78,10 @@ server {
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    server_name liteseed.neuweltgeld.xyz;
+    server_name <domain>;
 
-    ssl_certificate /etc/letsencrypt/live/liteseed.neuweltgeld.xyz/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/liteseed.neuweltgeld.xyz/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/<domain>/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/<domain>/privkey.pem;
 
     location / {
         proxy_pass http://localhost:8080; # or your port you changed at 6.
@@ -93,5 +93,27 @@ server {
 }
 ```
 
+Kaydedip çıkıyoruz.
 
+```
+sudo nginx -t
+```
+OK çıktısı vermeli
+
+Devamında
+````
+sudo service nginx restart
+````
+
+Diyerek restart atıyoruz. Bu aşamada domaine girdiğinizde bu şekilde görünmeli. Eğer görünmüyorsa bir yerde hata olmuştur.
+
+<img width="484" alt="image" src="https://github.com/neuweltgeld/liteseed/assets/101174090/2e43976e-ae8d-4cb6-9213-7332def29037">
+
+Gelelim son adım stake olayına. Domain kısmını değiştirin.
+
+```
+sudo docker run -v liteseed:/data edge stake -u "domain"
+```
+
+İşlemler bu kadar. Takıldığınız yer olursa rc de sorabilirsiniz.
 
