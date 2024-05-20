@@ -2,6 +2,8 @@ Liteseed node kurduktan sonra stake işlemini yapmalısınız. Kısaca bundan ba
 Henüz node kurmadıysanız Rues hocamın şu https://github.com/ruesandora/Liteseed şuradaki reposundan kurabilirsiniz. 
 Test tokenleriniz de geldiğinde stake adımına buradan devam edebilirsiniz.
 
+
+
 Uyarı : Öncelikle eğer her hangi bir domain ile stake ettiyseniz unstake edin. 
 Unstake komutu
 ```
@@ -13,6 +15,14 @@ sudo docker run -v liteseed:/data edge unstake "eskidomain"
 Balance kontrolü yapın 1000 tokeniniz geri gelmiş ve Staked No yazmış olmalı.
 ```
 sudo docker run -v liteseed:/data edge balance
+```
+
+Önceki çalışan nodu durdurun, ctrl + c ile
+Sonra aşağıdaki kod ile tekrar çalıştırın screen içinde
+
+```
+sudo docker run -p 8080:8080 -v liteseed:/data edge start
+
 ```
 
 Gelelim yeni adımlara, bir adet domaine ihtiyacınız var. Ben namecheap kullanıyorum, basit anlaşılır. Hali hazırda domaininiz varsa subdomain ekleyerek de işlemlere devam edebilirsiniz.
